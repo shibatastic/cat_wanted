@@ -1,0 +1,217 @@
+Ç@charset "UTF-8";
+
+/* base */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	vertical-align : middle
+}
+
+html {
+	font-family : verdana, sans-serif;
+	line-height : 1.5;
+}
+
+body {
+	background: #F5A503;
+	font-family: ÉÅÉCÉäÉI,meiryo,sans-serif;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+ul {
+	list-style :none;
+}
+
+/* header */
+
+header {
+	background: #F2385A;
+	width: 100%;
+	position: relative;
+}
+
+h1 {
+	font-family: 'Trade Winds',cursive;
+	line-height: 200px;
+	height: 200px;
+	font-size: 60px;
+	font-weight: normal;
+	float: left;
+	margin-left: 50px;
+	}
+
+#dangerous {
+	float: right;
+	width: 200px;
+	height: 200px;
+	margin-right: 20px;
+	background: transparent url(img/dangerous.png) no-repeat center;
+
+	-moz-animation: 20s anime linear infinite;
+	-webkit-animation: 20s anime linear infinite;
+	animation: 20s anime linear infinite;
+}
+
+#notice {
+	clear: both;
+	height: 50px;
+	font-size: 16px;
+	line-height: 50px;
+	background: #E9F1DF;
+	text-align: center;
+}
+
+#warning {
+	font-size: 26px;
+	line-height: 1.2;
+	text-align: center;
+	padding-left: 10px;
+	font-weight: bold;
+	position: absolute;
+	top: 70px;
+	right: 35px;
+	
+	-moz-transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	ransform: rotate(-10deg);
+}
+
+
+/* main */
+
+article {
+	width: 100%;
+}
+
+article h2 {
+	color: #fff;
+	line-height: 100px;
+	font-weight: normal;
+
+}
+
+h3 {
+
+}
+
+/* footer */
+footer {
+	background: transparent;
+	color: #fff;
+	width: 100%;
+	margin: 10px 0 0;
+}
+
+footer small {
+	clear: both;
+	display: block;
+	width: 100%;
+	text-align: right;
+	font-family: 'Trade Winds', cursive;
+	line-height: 50px;
+}
+
+/* ===== Animation ===== */
+@keyframes anime {
+	0% {
+		transform: rotate(0);
+
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+-webkit-@keyframes anime {
+	0% {
+		-webkit-transform: rotate(0);
+
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+#s1 h3 {
+	animation: 5s ease infinite anm1;
+}
+
+/* ===== For PC ===== */
+@media only screen and (min-width: 900px) {
+
+	#wrapper {
+		width: 900px;
+		height: 100%;
+		position: relative;
+		margin: 0 auto;
+	}
+
+	.flexBox {
+		display: -moz-box;
+		display: -webkit-box;
+		display: -ms-box;
+		display: box;
+		
+		width: 900px;
+		margin: 10px auto 0;
+	}
+
+	.flexbox section {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		overflow: visible;
+	}
+
+	.cats {
+		width: 290px;
+		background: #E9F1DF;
+		margin-right: 15px;
+	}
+
+	.cats img {
+		float: left;
+		padding: 10px;
+	}
+	
+	.cats dl {
+		float: left;
+	}
+	
+}
+
+/* ===== For Tablet ===== */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+
+	#wrapper {
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0 10px;
+	}
+	
+	
+}
+
+/* ===== For SmartPhone ===== */
+@media only screen and (max-width: 599px) {
+		#wrapper {
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0 10px;
+	}
+}

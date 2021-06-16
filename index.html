@@ -1,0 +1,519 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Wanted Cats</title>
+	<link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' />
+	<script src="prefixfree.min.js"></script>
+	
+<style>
+
+/* base */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	vertical-align : middle
+}
+
+html {
+	font-family : verdana, sans-serif;
+	line-height : 1.5;
+}
+
+body {
+	background: #F5A503;
+	font-family: メイリオ,meiryo,sans-serif;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+ul {
+	list-style :none;
+}
+
+strong {
+	color: #F2385A;
+}
+
+/* header */
+
+header {
+	background: #F2385A;
+	width: 100%;
+	position: relative;
+}
+
+h1 {
+		font-family: 'Trade Winds',cursive;
+		line-height: 200px;
+		height: 200px;
+		font-weight: normal;
+		float: left;
+		margin-left: 50px;
+	}
+
+#dangerous {
+	float: right;
+	width: 200px;
+	height: 200px;
+	margin-right: 20px;
+	background: transparent url(img/dangerous.png) no-repeat center;
+
+	-moz-animation: 20s anime linear infinite;
+	-webkit-animation: 20s anime linear infinite;
+	animation: 20s anime linear infinite;
+}
+
+#warning {
+	font-size: 26px;
+	line-height: 1.2;
+	text-align: center;
+	padding-left: 10px;
+	font-weight: bold;
+	position: absolute;
+	top: 70px;
+	right: 35px;
+	
+	-moz-transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	ransform: rotate(-10deg);
+}
+
+
+/* main */
+
+article {
+	width: 100%;
+}
+
+article h2 {
+	color: #fff;
+	line-height: 100px;
+	font-weight: normal;
+
+}
+
+#information p {
+	clear: both;
+	margin-top: 20px;
+	padding: 20px 50px;
+	font-size: 16px;
+	background: #E9F1DF;
+	border-top: 30px solid #F2385A;
+	border-bottom: 30px solid #F2385A;
+
+}
+
+/* footer */
+footer {
+	background: transparent;
+	color: #000;
+	width: 100%;
+	margin: 10px 0 0;
+}
+
+footer small {
+	clear: both;
+	display: block;
+	width: 100%;
+	text-align: right;
+	font-family: 'Trade Winds', cursive;
+	line-height: 50px;
+}
+
+/* ===== Animation ===== */
+@keyframes anime {
+	0% {
+		transform: rotate(0);
+
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+/* ===== For PC ===== */
+@media only screen and (min-width: 900px) {
+
+	#wrapper {
+		width: 900px;
+		height: 100%;
+		position: relative;
+		margin: 0 auto;
+	}
+
+	h1 {
+		font-size: 60px;
+	}
+	
+	#notice {
+		clear: both;
+		height: 50px;
+		font-size: 16px;
+		line-height: 50px;
+		background: #E9F1DF;
+		text-align: center;
+	}
+
+	.flexBox {
+		display: -moz-box;
+		display: -webkit-box;
+		display: -ms-box;
+		display: box;
+		
+		width: 900px;
+		margin: 10px auto 0;
+	}
+
+	.flexbox section {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		overflow: visible;
+	}
+
+	.cats {
+		width: 290px;
+		background: #E9F1DF;
+		margin-right: 15px;
+		position: relative;
+		padding-bottom: 140px;
+	}
+
+	.cats img {
+		float: left;
+		padding: 10px;
+	}
+	
+	.cats p {
+		clear: both;
+		padding: 0 10px 10px;
+	}
+	
+	.about {
+		float: left;
+		margin-top: 10px;
+		line-height: 2.2;
+	}
+	
+	.about dt {
+		font-size: 18px;
+		font-weight: bold;
+		background: #F2385A;
+		text-align: center;
+	}
+	
+	.rewards {
+		background: #F2385A;
+		padding: 10px;
+		font-family: 'Trade Winds',cursive;
+		height: 120px;
+		position: absolute;
+		bottom: 0;
+		width: 270px;
+	}
+
+	
+	.rewards dt {
+		font-size: 30px;
+	}
+
+	.rewards dd {
+		font-size: 50px;
+		text-align: right;
+	}
+}
+
+/* ===== For Tablet ===== */
+@media screen and (min-width: 600px) and (max-width: 899px) {
+	#wrapper {
+		width: 98%;
+		box-sizing: border-box;
+		padding: 0 10px;
+		margin: 0 auto;
+	}
+	
+	h1 {
+		font-size: 40px;
+	}
+	
+#notice {
+	clear: both;
+	width: 100%;
+	font-size: 16px;
+	background: #E9F1DF;
+	width: 90%;
+	padding: 2% 5%;
+}
+	
+	.cats {
+		width: 100%;
+		background: #E9F1DF;
+		margin-right: 15px;
+		position: relative;
+		margin-top: 10px;
+	}
+	
+	.cats img {
+		float: left;
+		padding: 10px;
+	}
+	
+	.cats p {
+		clear: both;
+		padding: 0 10px 10px;
+	}
+
+	.about {
+		float: left;
+		margin-top: 10px;
+		line-height: 2.2;
+	}
+	
+	.about dt {
+		font-size: 18px;
+		font-weight: bold;
+		background: #F2385A;
+		text-align: center;
+	}
+	
+	.rewards {
+		background: #F2385A;
+		padding: 10px;
+		font-family: 'Trade Winds',cursive;
+		height: 120px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 260px;
+	}
+
+	.rewards dt {
+		font-size: 28px;
+	}
+
+	.rewards dd {
+		font-size: 48px;
+		text-align: right;
+	}
+
+}
+
+/* ===== For SmartPhone ===== */
+@media screen and (max-width: 599px) {
+	#wrapper {
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0 10px;
+	}
+	
+	h1 {
+		font-size: 30px;
+	}
+	
+	#dangerous,#warning {
+		display: none;
+	}
+
+	#notice {
+		clear: both;
+		width: 100%;
+		font-size: 16px;
+		background: #E9F1DF;
+		width: 90%;
+		padding: 2% 5%;
+	}
+	.cats {
+		width: 100%;
+		background: #E9F1DF;
+		margin-right: 15px;
+		position: relative;
+		margin-top: 10px;
+		padding-bottom: 80px;
+	}
+	
+	.cats img {
+		float: left;
+		padding: 10px;
+	}
+	
+	.cats p {
+		clear: both;
+		padding: 0 10px 10px;
+	}
+
+	.about {
+		float: left;
+		margin-top: 10px;
+		line-height: 2.2;
+	}
+	
+	.about dt {
+		font-size: 18px;
+		font-weight: bold;
+		background: #F2385A;
+		text-align: center;
+	}
+	
+	.rewards {
+		background: #F2385A;
+		padding: 10px;
+		font-family: 'Trade Winds',cursive;
+		height: 60px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	.rewards dt {
+		font-size: 16px;
+	}
+
+	.rewards dd {
+		font-size: 30px;
+		text-align: right;
+	}
+}
+
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+	<header>
+			<h1>Wanted Cats</h1>
+			<div id="dangerous">
+				&nbsp;
+			</div>
+			<p id="notice">あなたの身の回りに潜んでいるかもしれない指名手配猫たち。見つけたらすぐに通報を！</p>
+			<p id="warning">あぶない！<br />Dangerous!</p>
+
+	</header>	
+		<article class="flexBox">
+			<section class="cats" class="clearfix">
+				<figure>
+					<img src="img/cat1.jpg" width="120" height="160" />
+				</figure>
+				<dl class="about">
+					<dt>親分</dt>
+					<dd><strong>最重要容疑猫</strong></dd>
+					<dd>32件の一級容疑</dd>
+					<dd>野良</dd>
+				</dl>
+				<p>5丁目付近のワル猫たちのボスです。一代でファミリーを築きました。体が大きく、うなるような鳴き声が特徴です。当局が最優先で行方を探している容疑猫です。</p>
+				<dl class="rewards">
+					<dt>Rewards</dt>
+					<dd>1,000,000$</dd>
+				</dl>
+			</section>
+			
+			<section class="cats">
+				<figure>
+					<img src="img/cat2.jpg" width="120" height="160" />
+				</figure>
+				<dl class="about">
+					<dt>マタキチ</dt>
+					<dd>マタタビ常習犯</dd>
+					<dd>空き地で目撃情報</dd>
+					<dd>野良</dd>
+				</dl>
+				<p>マタタビ常習犯です。ねこじゃらしが好きで、空き地でひとりあそびしている姿を目撃されています。</p>
+				<dl class="rewards">
+					<dt>Rewards</dt>
+					<dd>9,000$</dd>
+				</dl>
+			</section>
+			
+			<section class="cats">
+				<figure>
+					<img src="img/cat3.jpg" width="120" height="160" />
+				</figure>
+				<dl class="about">
+					<dt>タマコ</dt>
+					<dd><strong>捕獲済</strong></dd>
+					<dd>障子を破り逃走</dd>
+					<dd>田中さんの飼い猫</dd>
+				</dl>
+				<p>田中さんの飼い猫ですが、障子を破って逃走しました。鈴をつけていません。<br />※追加情報：2013年6月23日に発見、捕獲されました。ご協力ありがとうございました。</p>
+				<dl class="rewards">
+					<dt>Rewards</dt>
+					<dd>70,000$</dd>
+				</dl>
+
+			</section>
+		</article>
+		<article class="flexBox" class="clearfix">
+			<section class="cats">
+				<figure>
+					<img src="img/cat4.jpg" width="120" height="160" />
+				</figure>
+				<dl class="about">
+					<dt>シロ</dt>
+					<dd>爪とぎ常習犯</dd>
+					<dd>6件の一級容疑</dd>
+					<dd>野良</dd>
+				</dl>
+				<p>爪とぎで駐輪場の自転車をパンクさせた容疑があります。ダンボール置き場を寝床にしていたようですが、現在は行方がわかりません。</p>
+				<dl class="rewards">
+					<dt>Rewards</dt>
+					<dd>500,000$</dd>
+				</dl>
+				</section>
+				
+			<section class="cats">
+				<figure>
+					<img src="img/cat5.jpg" width="120" height="160" />
+				</figure>
+				<dl class="about">
+					<dt>ゴン介</dt>
+					<dd>空き巣容疑</dd>
+					<dd>おもちゃが好き</dd>
+					<dd>野良</dd>
+				</dl>
+				<p>鈴木さんの家に侵入し、ネズミのぬいぐるみを盗んだ疑いがあります。おもちゃが好きで、佐藤さん宅のミニカーを盗んだ前科があります。</p>
+				<dl class="rewards">
+					<dt>Rewards</dt>
+					<dd>500,000$</dd>
+				</dl>
+				</section>
+				
+			<section class="cats">
+				<figure>
+					<img src="img/cat6.jpg" width="120" height="160" />
+				</figure>
+				<dl class="about">
+					<dt>カミソリ</dt>
+					<dd><strong>危険猫</strong></dd>
+					<dd>13件の一級容疑</dd>
+					<dd>野良</dd>
+				</dl>
+				<p>親分ファミリーの武闘派猫です。2013年6月11日に、斎藤さん宅のミーちゃんが爪で引っかかれ、怪我をしました。大変凶暴な性格をしていますので、注意が必要です。</p>
+				<dl class="rewards">
+					<dt>Rewards</dt>
+					<dd>800,000$</dd>
+				</dl>
+				</section>
+		</article>
+		
+		<article id="information">
+			<p>捕獲された猫は更生施設に入り、野良猫の場合は去勢・避妊手術をした後に里子にだされます。街の治安と猫の幸せのために、皆さんのご協力をお願い申し上げます。</p>
+		</article>
+	
+	<footer>
+			<small>&copy; 2013 shibatastic.</small>
+	</footer>
+	</div>
+</body>
+</html>
